@@ -1,0 +1,244 @@
+- var siteName = 'Newlook'
+
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+  head
+    meta(name='viewport', content='width=device-width')
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    title Welcome to Newlook
+
+    :stylus
+      _accent = #0072c6
+      _light = #FFF
+      _dark = #333
+      _family = "Open Sans", "Helvetica Neue", "Segoe UI", sans-serif
+      _family = sans-serif
+
+      *
+        margin 0
+        padding 0
+        font-family _family
+        font-size 100%
+        line-height 1.6
+
+      img
+        max-width 100%
+
+      body
+        -webkit-font-smoothing antialiased
+        -webkit-text-size-adjust none
+        width 100%!important
+        height 100%
+        color _dark
+
+      a
+        color _accent
+
+      .btn-primary
+        text-decoration none
+        color #FFF
+        background-color _accent
+        border solid _accent
+        border-width 8px 20px
+        border-radius 5px
+        line-height 2
+        font-weight bold
+        margin-right 10px
+        text-align center
+        cursor pointer
+        display inline-block
+        &:hover
+          background-color lighten(_accent, 10%)
+          border-color lighten(_accent, 10%)
+
+      .btn-secondary
+        text-decoration none
+        color #FFF
+        background-color #AAA
+        border solid #AAA
+        border-width 8px 20px
+        line-height 2
+        font-weight bold
+        margin-right 10px
+        text-align center
+        cursor pointer
+        display inline-block
+        border-radius 25px
+        &:hover
+          background-color lighten(#AAA, 10%)
+          border-color lighten(#AAA, 10%)
+
+      .padding
+        padding 10px 0
+
+      table
+        &.body-wrap
+          width 100%
+          padding 10px 20px
+          .container
+            border 1px solid #f0f0f0
+            padding 20px
+
+        &.footer-wrap,
+        &.header-wrap
+          width 100%
+          clear both!important
+          padding-top 10px
+          .container
+            p
+              font-size 12px
+              color darken(_light, 40%)
+              margin 0
+              font-weight 400
+              strong
+                font-weight 600
+                color darken(_light, 60%)
+            a
+              color darken(_light, 60%)
+              font-weight 600
+              &:hover
+                color _dark
+
+      h1, h2, h3, h4
+        font-family _family
+        line-height 1.1
+        color _dark
+        margin 10px 0
+        font-weight 200
+
+
+      h1
+        font-size 36px
+
+      h2
+        font-size 28px
+
+      h3
+        font-size 22px
+
+      h4
+        font-size 18px
+
+      hr
+        border none
+        border-top 2px solid darken(_light, 10%)
+        margin 10px 0
+
+      p, ul, ol
+        margin-bottom 10px
+        font-weight normal
+        font-size 14px
+
+      p.empty
+        line-height 10px
+        font-size 10px
+        margin 0
+
+      ul li, ol li
+        margin-left 5px
+        list-style-position inside
+
+      .container,
+      .container-no-padding
+        display block!important
+        max-width 600px!important
+        margin 0 auto!important
+        clear both!important      
+
+      .content
+        max-width 600px
+        margin 0 auto
+        display block
+        table
+          width 100%
+
+      .text-right
+        text-align right
+
+      @media all and (max-width: 480px)
+        table
+          &.body-wrap
+            padding-left 0
+            padding-right 0
+
+      
+  body(bgcolor='#F2F2F2')
+
+    table.header-wrap
+      tr
+        td
+        td.container
+          .content
+            table
+              tr
+                td(align='center')
+                  p You are receiving this e-mail because you have signed up to 
+                    strong #{siteName}
+        td
+
+    table.body-wrap
+      tr
+        td
+        td.container(bgcolor='#FFFFFF')
+          .content
+            table
+              tr
+                td
+                  img(src='logo.png')
+                td.text-right
+                  //- Right header
+            table
+              tr
+                td
+                  hr
+                  p.empty &nbsp;
+                  p Hi there,
+                    br
+                    | Sometimes all you want is to send a simple HTML email with a basic design.
+                  p.empty &nbsp;
+                  h1 Really simple HTML email template
+                  p.empty &nbsp;
+                  h2 New to Newlook?
+                  p Newlook is made upon Jade and Stylus. Everything is coded into a single file and it should work on quite every device and mobile client.
+                  p Newlook is also responsive-friendly for modern devices!
+                  p.empty &nbsp;
+                  h2 Easy to customize
+                  p You can customize this template by changing color variables and site name.
+                  p Feel free to use, copy, modify this email template as you wish.
+                  p.empty &nbsp;
+                  
+                  p
+                    a.btn-primary(href='https://github.com/emanuelebrivio/newlook') View the source on GitHub
+                
+                  p.empty &nbsp;
+
+                  h2 Credits
+                  p Newlook is a fork of 
+                    strong leemunroe 
+                    | work, that you can find 
+                    a(href='https://github.com/leemunroe/html-email-template') here
+                    | .
+
+                  p.empty &nbsp;
+                  hr
+                  p.empty &nbsp;
+                  p Thanks, have a nice day!
+                    br
+                    em &nbsp;&nbsp;&nbsp;Emanuele Brivio
+
+        td
+
+    table.footer-wrap
+      tr
+        td
+        td.container
+          .content
+            table
+              tr
+                td(align='center')
+                  p
+                    | Don't like these annoying emails? 
+                    a(href='#')
+                      unsubscribe Unsubscribe
+                    | .
+        td
